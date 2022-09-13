@@ -1,38 +1,40 @@
 <div class="form-content">
-    <form class="form">
+   <!-- <h1>{{title}}</h1> -->
+  
+    <form class="form" [formGroup]="emppayrollForm" (ngSubmit)="empUser()" >
         <div class="form-head ">Employee Payroll Form</div>
         <div class="row-content ">
             <label for="name " class="label text ">Full Name</label>
-            <input type="text " name="name " id="name " class="input " placeholder="Your Name ... " required>
+            <input formControlName="FullName" type="text " name="name " id="name " class="input " placeholder="Your Name ... " required >
         </div>
 
         <div class="row-content">
             <label class="label text" for="profile">Profile Image</label>
             <div class="profile-radio-content">
                 <label>
-                    <input type="radio" id="profile1" name="profile" value="../assets/profilepic/Ellipse -1.png" required>
-                    <img class="profile" id="image1" src="../assets/profilepic/Ellipse -1.png">
+                    <input formControlName="ProfileImage" type="radio" id="profile1" name="profile" value="../assets/profilepic/Ellipse -1.png" required >
+                    <img class="profile" id="image1" src="../assets/profile1.jpg">
                 </label>
                 <label>
-                    <input type="radio" id="profile1" name="profile" value="../assets/profilepic/Ellipse -2.png" required>
-                    <img class="profile" id="image2" src="../assets/profilepic/Ellipse -2.png">
+                    <input formControlName="ProfileImage" type="radio" id="profile1" name="profile" value="../assets/profilepic/Ellipse -2.png" required >
+                    <img class="profile" id="image2" src="../assets/profile2.jpg">
                 </label>
                 <label>
-                    <input type="radio" id="profile1" name="profile" value="../assets/profilepicEllipse -3.png" required>
-                    <img class="profile" id="image3" src="../assets/profilepic/Ellipse -3.png">
+                    <input formControlName="ProfileImage" type="radio" id="profile1" name="profile" value="../assets/profilepicEllipse -3.png" required>
+                    <img class="profile" id="image3" src="../assets/profile3.jpg">
                 </label>
                 <label>
-                    <input type="radio" id="profile1" name="profile" value="../assets/profilepic/Ellipse -4.png" required>
-                    <img class="profile" id="image4" src="../assets/profilepic/Ellipse -4.png">
+                    <input formControlName="ProfileImage" type="radio" id="profile1" name="profile" value="../assets/profilepic/Ellipse -4.png" required>
+                    <img class="profile" id="image4" src="../assets/profile4.jpg">
                 </label>
             </div>
         </div>
         <div class="row-content">
             <label class="label text" for="gender">Gender</label>
             <div>
-                <input type="radio" id="male" name="gender" value="Male">
+                <input formControlName="Gender" type="radio" id="male" name="gender" value="Male">
                 <label class="text" for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="Female">
+                <input formControlName="Gender" type="radio" id="female" name="gender" value="Female">
                 <label class="text" for="female">Female</label>
             </div>
         </div>
@@ -40,28 +42,28 @@
         <div class="row-content">
             <label class="label text" for="department">Department</label>
             <div>
-                <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
+                <input formControlName="Department" class="checkbox" type="checkbox" id="hr" name="department" value="HR">
                 <label class="text" for="hr">HR</label>
-                <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
+                <input formControlName="Department" class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
                 <label class="text" for="sales">Sales</label>
-                <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
+                <input formControlName="Department" class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
                 <label class="text" for="finance">Finance</label>
-                <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
+                <input formControlName="Department" class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
                 <label class="text" for="engineer">Engineer</label>
-                <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
+                <input formControlName="Department" class="checkbox" type="checkbox" id="others" name="department" value="Others">
                 <label class="text" for="others">Others</label>
             </div>
         </div>
 
         <div class="row-content">
             <label class="label text" for="salary">Choose Your Salary: </label>
-            <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+            <input formControlName="ChooseYourSalary" class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
             <output class="salary-output" for="salary">400000</output>
         </div>
         <div class="row-content">
             <label class="label text" for="startDate">Start Date</label>
             <div>
-                <select id="day" name="Day">
+                <select id="day" name="Day" formControlName="StartDate">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -123,15 +125,16 @@
         </div>
         <div class="row-content">
             <label class="label text" for="notes">Notes</label>
-            <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
+            <textarea formControlName="Notes" id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
         </div>
         <div class="buttonParent">
-            <a class="resetButton button cancelButton">Cancel</a>
+            <a  class="resetButton button cancelButton">Cancel</a>
             <div class="submit-reset">
-                <button type="submit" class="button submitButton">Submit</button>
-                <button type="reset" class="resetButton button">Reset</button>
+                <button  type="submit" class="button submitButton">Submit</button>
+                <button  type="reset" class="resetButton button">Reset</button>
             </div>
         </div>
+</form>
 
-    </form>
-</div>
+
+  </div>

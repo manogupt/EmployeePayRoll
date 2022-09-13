@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
+
 
 const routes: Routes = [
   {
@@ -21,4 +23,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  
+ }
