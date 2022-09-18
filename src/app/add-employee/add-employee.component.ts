@@ -29,12 +29,15 @@ empUser(){
   this.employee = Object.assign(this.employee, this.emppayrollForm.value);
   localStorage.setItem('employees', JSON.stringify(this.employee));
 
+
   if (localStorage.getItem('employees')) {
     this.employee = localStorage.getItem('employees');
     this.employee=JSON.parse(this.employee)
   }
 
   }
+
+
 
 }
 

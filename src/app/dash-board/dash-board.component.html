@@ -31,8 +31,8 @@
             </td>
            
             
-            <td *ngFor="let employee of this.employee ">
-             {{employee.name}}
+            <td   >
+             {{employee.FullName}}
             </td>
             <td>{{employee.Gender}}</td>
             <td>
@@ -48,10 +48,9 @@
         </table>
     </div>
    
-      
-      
-       <!-- <h2>{{employee.Name}}  {{employee.Gender}}  {{employee.Department}}       {{employee.ChooseYourSalary}}     {{employee.StartDate}}</h2>
-        </li> -->
-
-      <!-- </ul> -->
+      <ul>
+      <li *ngFor="let employee of this.employee ">
+       {{employee.FullName}}  {{employee.Gender}} {{employee.Department}}  {{employee.ChooseYourSalary}}  {{employee.StartDate}}
+        </li>
+      </ul> 
 </div>
